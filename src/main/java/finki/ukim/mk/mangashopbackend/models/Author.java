@@ -22,4 +22,10 @@ public class Author {
 
     @OneToMany
     private List<Manga> manga;
+
+    public Author(String name, String lastName, List<Manga> mangaList) {
+        this.first_name = name;
+        this.last_name = lastName;
+        this.manga = mangaList;
+    }
 }

@@ -24,4 +24,13 @@ public class Manga {
     private Genre genre;
     @ManyToOne
     private Publisher publisher;
+
+    public Manga(String name, Author author, Double price, Integer quantity, Genre genre, Publisher publisher) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
+        this.quantity = quantity;
+        this.genre = genre;
+        this.publisher = publisher;
+    }
 }

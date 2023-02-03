@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -24,4 +25,11 @@ public class ShoppingCart {
 
     @ManyToOne
     private User user;
+
+    @ManyToMany
+    private List<Manga> mangaList;
+
+    public ShoppingCart(User user) {
+        this.user = user;
+    }
 }
