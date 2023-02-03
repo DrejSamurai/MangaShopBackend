@@ -1,9 +1,11 @@
 package finki.ukim.mk.mangashopbackend.services;
 
 import finki.ukim.mk.mangashopbackend.models.Publisher;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
 
 public interface PublisherService {
         Optional<Publisher> findById(Long id);

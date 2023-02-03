@@ -2,9 +2,11 @@ package finki.ukim.mk.mangashopbackend.services;
 
 import finki.ukim.mk.mangashopbackend.models.Author;
 import finki.ukim.mk.mangashopbackend.models.Manga;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
 
 public interface AuthorService {
 

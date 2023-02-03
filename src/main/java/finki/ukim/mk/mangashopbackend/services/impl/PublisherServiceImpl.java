@@ -4,10 +4,12 @@ import finki.ukim.mk.mangashopbackend.models.Publisher;
 import finki.ukim.mk.mangashopbackend.repository.PublisherRepository;
 import finki.ukim.mk.mangashopbackend.services.PublisherService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 @AllArgsConstructor
 public class PublisherServiceImpl implements PublisherService {
     private final PublisherRepository publisherRepository;

@@ -8,10 +8,12 @@ import finki.ukim.mk.mangashopbackend.models.Publisher;
 import finki.ukim.mk.mangashopbackend.repository.MangaRepository;
 import finki.ukim.mk.mangashopbackend.services.MangaService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 @AllArgsConstructor
 public class MangaServiceImpl implements MangaService {
     private final MangaRepository mangaRepository;

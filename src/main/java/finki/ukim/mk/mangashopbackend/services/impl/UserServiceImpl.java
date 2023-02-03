@@ -8,14 +8,19 @@ import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
-@AllArgsConstructor
+@Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public User register(String username, String password, String repeatPassword, String name, String surname, Role role) {
-        User user = new User(username,passwordEncoder.encode(password),name,surname,role);
+        User user = new User(username,password,name,surname,role);
         return userRepository.save(user);
 
     }

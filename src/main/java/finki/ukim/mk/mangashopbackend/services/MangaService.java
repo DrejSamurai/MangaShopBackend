@@ -7,6 +7,7 @@ import finki.ukim.mk.mangashopbackend.models.Publisher;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;

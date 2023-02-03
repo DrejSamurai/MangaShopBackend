@@ -11,9 +11,11 @@ import finki.ukim.mk.mangashopbackend.repository.ShoppingCartRepository;
 import finki.ukim.mk.mangashopbackend.repository.UserRepository;
 import finki.ukim.mk.mangashopbackend.services.ShoppingCartService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @AllArgsConstructor
 public class ShoppingCartServiceImpl implements ShoppingCartService {
     private final ShoppingCartRepository shoppingCartRepository;
@@ -32,7 +34,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
                 .orElseThrow(()-> new UserNotFoundException(username));
 
         return this.shoppingCartRepository
-                .findByUserAndStatus(user, ShoppingCartStatus.CREATED)
+                .findByUserAndShoppingCartStatus(user, ShoppingCartStatus.CREATED)
                 .orElseGet(() -> {
                     ShoppingCart cart = new ShoppingCart(user);
                     return this.shoppingCartRepository.save(cart);

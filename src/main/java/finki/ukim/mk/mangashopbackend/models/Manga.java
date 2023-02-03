@@ -2,14 +2,12 @@ package finki.ukim.mk.mangashopbackend.models;
 
 import finki.ukim.mk.mangashopbackend.enumerators.Genre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class Manga {
 
     @Id

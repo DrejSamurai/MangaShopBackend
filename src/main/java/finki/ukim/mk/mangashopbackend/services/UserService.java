@@ -3,6 +3,7 @@ package finki.ukim.mk.mangashopbackend.services;
 import finki.ukim.mk.mangashopbackend.enumerators.Role;
 import finki.ukim.mk.mangashopbackend.models.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.stereotype.Service;
 
 public interface UserService extends UserDetailsService {
 
